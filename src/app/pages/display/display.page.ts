@@ -1,13 +1,14 @@
 import { Component, OnInit } from "@angular/core";
-import { TodoService, Todo } from "../services/todo.service";
+import { TodoService, Todo } from "../../services/todo.service";
 
 @Component({
-  selector: "app-home",
-  templateUrl: "home.page.html",
-  styleUrls: ["home.page.scss"]
+  selector: "app-display",
+  templateUrl: "./display.page.html",
+  styleUrls: ["./display.page.scss"]
 })
-export class HomePage implements OnInit {
+export class DisplayPage implements OnInit {
   private todos: Todo[];
+
   constructor(private todoService: TodoService) {}
 
   ngOnInit() {
