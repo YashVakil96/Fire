@@ -2,8 +2,8 @@ import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
-  { path: "", redirectTo: "display", pathMatch: "full" },
-  { path: "home", loadChildren: "./pages/home/home.module#HomeModule" },
+  { path: "", redirectTo: "index", pathMatch: "full" },
+  //   { path: "home", loadChildren: "./home/home.module#HomeModule" },
   {
     path: "details",
     loadChildren:
@@ -17,7 +17,8 @@ const routes: Routes = [
   {
     path: "display",
     loadChildren: "./pages/display/display.module#DisplayPageModule"
-  }
+  },
+  { path: "index", loadChildren: "./pages/index/index.module#IndexPageModule" }
 ];
 
 @NgModule({
