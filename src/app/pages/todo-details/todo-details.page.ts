@@ -11,9 +11,10 @@ import { Router } from "@angular/router";
 })
 export class TodoDetailsPage implements OnInit {
   todo: Todo = {
-    task: "Test 123",
+    pname: "Test 123",
+    addedby: "Joker",
     createdAt: new Date().getTime(),
-    priority: 2
+    stock: 2
   };
   todoId = null;
   constructor(

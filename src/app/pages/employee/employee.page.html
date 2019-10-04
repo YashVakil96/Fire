@@ -1,16 +1,12 @@
 <ion-header>
     <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-back-button defaultHref="/index"></ion-back-button>
-        </ion-buttons>
-        <ion-title>Inventory</ion-title>
+        <ion-title>Employees</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
     <ion-list>
-        <ion-searchbar autocomplete="on" showcancelbutton="" (ioninput)="filterList($event)"></ion-searchbar>
-        <ng-container *ngIf="!todos || todos.length == 0">
+        <ng-container *ngIf="!employees || employees.length == 0">
             <div *ngFor="let n of [0, 1, 2]" padding>
                 <ion-skeleton-text></ion-skeleton-text>
                 <p>
@@ -19,14 +15,14 @@
             </div>
         </ng-container>
 
-        <ion-item-sliding *ngFor="let item of todos">
+        <ion-item-sliding *ngFor="let item of employees">
             <ion-item lines="inset" button [routerLink]="['/details', item.id]">
                 <ion-label>
-                    {{ item.pname }}
-                    <p>Added By: {{ item.addedby}}</p>
-                    <p>{{ item.createdAt | date: "short" }}</p>
+                    Name{{ item.ename }}
+                    <p>Age: {{ item.age}}</p>
+                    <p>Joined aAget:{{ item.joindate | date: "short" }}</p>
                 </ion-label>
-                <ion-note slot="end" color="primary">{{ item.stock }}</ion-note>
+                <!-- <ion-note slot="end" color="primary">{{ item.stock }}</ion-note> -->
             </ion-item>
 
             <ion-item-options side="end">

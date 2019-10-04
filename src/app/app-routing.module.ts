@@ -18,7 +18,9 @@ const routes: Routes = [
     path: "display",
     loadChildren: "./pages/display/display.module#DisplayPageModule"
   },
-  { path: "index", loadChildren: "./pages/index/index.module#IndexPageModule" }
+  { path: "index", loadChildren: "./pages/index/index.module#IndexPageModule" },
+  { path: 'employee', loadChildren: './pages/employee/employee.module#EmployeePageModule' },
+  { path: 'employee-details', loadChildren: './pages/employee-details/employee-details.module#EmployeeDetailsPageModule' }
 ];
 
 @NgModule({

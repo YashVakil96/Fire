@@ -8,6 +8,7 @@ import { TodoService, Todo } from "../../services/todo.service";
 })
 export class DisplayPage implements OnInit {
   private todos: Todo[];
+  //   private loadedtodos: Todo[];
 
   constructor(private todoService: TodoService) {}
 

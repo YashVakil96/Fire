@@ -3,17 +3,20 @@
         <ion-buttons slot="start">
             <ion-back-button defaultHref="/display"></ion-back-button>
         </ion-buttons>
-        <ion-title>Details</ion-title>
+        <ion-title>Add Product</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
     <ion-list lines="full">
         <ion-item>
-            <ion-input required type="text" placeholder="Task" [(ngModel)]="todo.task"></ion-input>
+            <ion-input required type="text" placeholder="Product Name" [(ngModel)]="todo.pname"></ion-input>
         </ion-item>
         <ion-item>
-            <ion-input required type="number" placeholder="Priority" [(ngModel)]="todo.priority"></ion-input>
+            <ion-input required type="text" placeholder="Added By" [(ngModel)]="todo.addedby"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input required type="number" placeholder="Stock" [(ngModel)]="todo.stock"></ion-input>
         </ion-item>
     </ion-list>
     <ion-button expand="full" (click)="saveTodo()">Save</ion-button>

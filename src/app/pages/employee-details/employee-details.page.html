@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Add Employee</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list lines="full">
+        <ion-item>
+            <ion-input required type="text" placeholder="Employee Name" [(ngModel)]="employee.ename"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input required type="date" placeholder="Join Date" [(ngModel)]="employee.joindate"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input required type="number" placeholder="Age" [(ngModel)]="employee.age"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-button expand="full" (click)="saveTodo()">Save</ion-button>
+</ion-content>
